@@ -1,0 +1,14 @@
+1) Add dependency (iojsonwebtoken)
+2) create JWt autheticationEntryPoint implemnts AuthenticationEntryPoint interface
+3) create JWTTokenHelper class to perform token related operation(Generate, Validate token)
+4) Create class JWTAuthenticationFilter extends OnceRequestFilter(It will intercept the request,it checks api before reaching to server token is available)
+  a) Get JWT Toen from request
+  b) Validate Token
+  c) Get user from Token
+  d) Load user associated with token
+  e) set spring security(set Authentication if valid user)
+
+5) Create JWTAuthResponse class (Token data Type)
+6) Create JWT in spring security config (security config tells when to filter when to run)
+7) Create login apito return token(it will take username and password and verify details if wrong credentials then error)
+8) Test the Application
